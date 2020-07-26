@@ -22,7 +22,7 @@ const Video = ({ yoloData }) => {
     <>
       <video
         ref={videoRef}
-        style={{ transform: 'scale(-1, 1)' }}
+        style={{ transform: 'scale(1, 1)' }}
         width={width}
         height={height}
         id="video"
