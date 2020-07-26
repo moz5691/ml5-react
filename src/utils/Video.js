@@ -28,9 +28,9 @@ const Video = ({ yoloData }) => {
         id="video"
         style={{ zIndex: -1 }}
       />
-      <svg id="canvas" width="600" height="450">
-        {yoloData.map((yolo, i) => (
-          <>
+      {yoloData.map((yolo, i) => (
+        <div key={i}>
+          <svg className="canvas" width="600" height="450">
             <rect
               x={yolo.normalized.x * width}
               y={yolo.normalized.y * height}
@@ -48,14 +48,44 @@ const Video = ({ yoloData }) => {
               x={yolo.normalized.x * width + 20}
               y={(yolo.normalized.y + yolo.normalized.height / 2) * height}
               fill="white"
-              font-family="Arial, Helvetica, sans-serif"
-              font-size="24"
+              // font-family="Arial, Helvetica, sans-serif"
+              // font-size="24"
             >
               {yolo.label} -- {formatAsPercentage(yolo.confidence)}
             </text>
-          </>
-        ))}
-      </svg>
+          </svg>
+        </div>
+      ))}
+
+      {/* <svg id="canvas" width="600" height="450">
+        {yoloData &&
+          yoloData.map((yolo, i) => (
+            <>
+              <rect
+                x={yolo.normalized.x * width}
+                y={yolo.normalized.y * height}
+                width={yolo.normalized.width * width}
+                height={yolo.normalized.height * height}
+                style={{
+                  fill: 'blue',
+                  stroke: 'pink',
+                  strokeWidth: 3,
+                  fillOpacity: 0.1,
+                  strokeOpacity: 0.9,
+                }}
+              />
+              <text
+                x={yolo.normalized.x * width + 20}
+                y={(yolo.normalized.y + yolo.normalized.height / 2) * height}
+                fill="white"
+                font-family="Arial, Helvetica, sans-serif"
+                font-size="24"
+              >
+                {yolo.label} -- {formatAsPercentage(yolo.confidence)}
+              </text>
+            </>
+          ))}
+      </svg> */}
     </>
   );
 };

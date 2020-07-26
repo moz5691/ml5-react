@@ -9,7 +9,7 @@ export default async function classifyImg(id) {
   try {
     const classifier = await ml5.imageClassifier('MobileNet');
     results = await classifier.predict(image);
-    // await delay(2000);
+    await delay(500);
     console.log('results', results);
   } catch (err) {
     console.log(err);
