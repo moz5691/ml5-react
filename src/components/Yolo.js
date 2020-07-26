@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Video from '../utils/Video';
 import * as ml5 from 'ml5';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+// const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const maxIteration = 100;
 let iteration = 0;
 let yolo;
 let objects = [];

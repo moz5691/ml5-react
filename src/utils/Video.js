@@ -26,7 +26,6 @@ const Video = ({ yoloData }) => {
         width={width}
         height={height}
         id="video"
-        style={{ zIndex: -1 }}
       />
       {yoloData.map((yolo, i) => (
         <div key={i}>
