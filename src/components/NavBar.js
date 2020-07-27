@@ -64,7 +64,13 @@ function NavBar() {
             </MenuItem>
           </Menu>
 
-          <Typography variant="h6" color="inherit">
+          <Typography
+            style={{ textDecoration: 'none', color: 'white' }}
+            variant="h6"
+            color="inherit"
+            component={Link}
+            to="/"
+          >
             Tensorflow.js
           </Typography>
         </Toolbar>
