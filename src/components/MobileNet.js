@@ -174,7 +174,7 @@ function MobileNet() {
                   id="uploaded-image"
                   width="300"
                   height="300"
-                  alt="uploaded image"
+                  alt="uploaded"
                 />
               )}
             </Paper>
