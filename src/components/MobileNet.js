@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 1000,
+    width: 1300,
     height: 600,
     overflowY: 'auto',
   },
