@@ -115,6 +115,7 @@ function MobileNet() {
                 onClick={() => {
                   setSelected(image.title);
                   setLoading(true);
+                  setPredicts([]);
                   setImageToRender(image.image);
                 }}
               />
@@ -182,7 +183,7 @@ function MobileNet() {
           <Grid item xs={6}>
             <Paper className={classes.paper}>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                {loading ? (
+                {loading && predicts ? (
                   <ProgressBar />
                 ) : (
                   <div className={classes.list}>
